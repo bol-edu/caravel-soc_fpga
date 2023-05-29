@@ -3,7 +3,7 @@
 The Boledu [Caravel SoC](https://github.com/bol-edu/caravel-soc) ([MPW8-C](https://github.com/efabless/caravel_user_project/tree/mpw-8c) code base) was removed all SKY PDK dependencies to provide quickly logic simulation for development. Two software debugging enhances were proposed and implemented. Firstly, an open source [GDBWave](https://tomverbeure.github.io/2022/02/20/GDBWave-Post-Simulation-RISCV-SW-Debugging.html) was integrated into Caravel SoC design flow. The GDBWave parses the waveform after RTL simulation to manipulate GDB debugging with VexRiscv CPU. Secondly, a proposed [Riscv-Tracer](https://github.com/bol-edu/caravel-soc/tree/cpu-trace) was helped to translate waveform display to RISC-V instructions representation.  
 The Boledu [Caravel SoC FPGA](https://github.com/bol-edu/caravel-soc_fpga) was ported from [Caravel SoC](https://github.com/bol-edu/caravel-soc) with a little SoC system revisions. Caravel users can quickly prototype their user project design on Xilinx FPGA board. The Xilinx Vitis provides [Xilinx Vivado Simulator](https://github.com/Xilinx/xup_fpga_vivado_flow/blob/main/slides/12_Vivado%20Design%20Flow.pdf) (XSIM) and [Xiliinx Vivado](https://www.xilinx.com/products/design-tools/vivado.html) hardware block design tool for Caravel SoC FPGA bitstream generation. Finally, Caravel users can continue to validate their design on Boledu online FPGA board with Jupyter Notebook testbench.
 
-![boledu dev flow](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/803f984f-2e1a-47ec-897c-216c72c7ea3d)
+![boledu dev flow](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/01126c0e-d6b6-4715-8fb6-dec622adf28d)
 
 To emulate the Efabless Caravel harness SoC simulation environment, we implemented [4 simple designs](https://github.com/bol-edu/caravel-soc_fpga/tree/main/vivado/vitis_prj) as in the figure below.
 1. ResetControl: A memory-mapped-io to control Caravel reset pin. 
@@ -13,7 +13,7 @@ To emulate the Efabless Caravel harness SoC simulation environment, we implement
 
 The Caravel Verilog testbench code can be easily translated to Jupyter Notebook Python testbench code as illustrated in [caravel_fpga.ipynb]( https://github.com/bol-edu/caravel-soc_fpga/blob/main/vivado/jupyter_notebook/caravel_fpga.ipynb)
 
-<p align="center"><img src="https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/54a4a130-a1d6-498d-99e5-ad1947d0e467" width=70%></p>
+<p align="center"><img src="https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/66b47711-5bfc-4178-9a62-0a64ce5ecf17" width=70%></p>
 
 Any question/idea of Caravel SoC FPGA can be posted in [Discussions](https://github.com/bol-edu/caravel-soc_fpga/discussions).
 
@@ -21,7 +21,7 @@ Acknowledgement for Project:
 [Patrick Lin](mailto:patrickxlin@gmail.com)/[patrick-lin-git](https://github.com/patrick-lin-git), [Willy Chiang](mailto:cwenpin@gmail.com), [Tony Ho](mailto:tonyho722@gmail.com), [Allen Chang](mailto:mailggwhc@gmail.com), [Ian Liu](mailto:IanLiu@vianextech.com), [Bow Chao](mailto:var256@gmail.com)
 
 [Video Demonstration on Youtube](https://www.youtube.com/watch?v=n09mRNaYMiY "Video Demonstration")  
-<img src="https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/fc6e788f-9186-4c54-9f8b-408a63a55a79" width=60%>
+<img src="https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/269794fc-d865-4625-bc78-0e2427c6152b" width=60%>
 
 ## Toolchain Prerequisites
 * [Ubuntu 20.04+](https://releases.ubuntu.com/focal/)
@@ -113,9 +113,9 @@ $ cd ~/caravel-soc_fpga/testbench/counter_la/
 $ ./run_xsim
 $ gtkwave waveform.gtkw
 ```
-![counter_la](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/98d3aff8-8936-49ef-9958-82b92391dbf6)
+![counter_la](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/41ae723e-8214-424b-9e66-171bce87829e)
 
-Detailed [counter_la.log](https://github.com/bol-edu/caravel-soc_fpga/files/11561053/counter_la.log) of run_xsim  
+Detailed [counter_la.log](https://github.com/bol-edu/caravel-soc_fpga/files/11592235/counter_la.log) of run_xsim  
 
 * Counter with (WB) wishbone interface  
 
@@ -131,10 +131,10 @@ $ cd ~/caravel-soc_fpga/testbench/counter_wb/
 $ ./run_xsim
 $ gtkwave waveform.gtkw
 ```
-![counter_wb](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/7d402078-560d-4ff4-8833-e7fc4276a59a)
+![counter_wb](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/b7315445-ec13-4783-b612-617b0dcdbc0c)
 
-Detailed [counter_wb.log](https://github.com/bol-edu/caravel-soc_fpga/files/11561055/counter_wb.log) of run_xsim  
- 
+Detailed [counter_wb.log](https://github.com/bol-edu/caravel-soc_fpga/files/11592238/counter_wb.log) of run_xsim  
+
 * GCD with (LA) logic analyzer interface  
 
 Files of gcd_la for running Xilinx XSIM:  
@@ -149,9 +149,9 @@ $ cd ~/caravel-soc_fpga/testbench/gcd_la/
 $ ./run_xsim
 $ gtkwave waveform.gtkw
 ```
-![gcd_la](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/9b0e1240-4510-416c-91a1-4ecd2ce725a3)
+![gcd_la](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/f2974093-6956-4573-9c72-4cae0f684dd8)
 
-Detailed [gcd_la.log](https://github.com/bol-edu/caravel-soc_fpga/files/11561054/gcd_la.log) of run_xsim  
+Detailed [gcd_la.log](https://github.com/bol-edu/caravel-soc_fpga/files/11592241/gcd_la.log) of run_xsim  
 
 ## Generate Caravel SoC FPGA Bitstream from Xilinx Vivado
 After design validation through Vivado simulation, Caraver SoC FPGA and its integrated user project design can be synthesized to FPGA bitstream and continue to be validated on PYNQ-Z2 FPGA board with Jupyter Notebook testbench. Before running Xilinx Vivado synthesis , you need to setup PYNQ-Z2 board files.
@@ -348,25 +348,25 @@ user caravel.user@gmail.com rented device pynq_15 successfully
 jupyter web ip port is 218.103.115.199:21500, web passwd is uqcseg and timeup at 05/24/2023 01:46:56
 ```
 * Web login `218.103.115.199:21500` with passwd `uqcseg`
-![jupyter01](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/db746025-ad5d-406b-bb13-d206e21a3d36)
+![jupyter01](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/e652c674-a4fc-455e-a8ce-b8b9ab7a4fcd)
 
 * New -> Folder -> Rename default `Untitled Folder` Folder -> `ipy_fpga` Folder
-![jupyter02](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/25b20584-3b3d-49ef-91b4-d56422c9f5c5)
+![jupyter02](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/1457195c-99d5-4656-813c-464e5e300c7d)
 
 * Click into `ipy_fpga` Folder -> Upload all tests to wait queue from local -> Click each blue Upload bar to transfer
-![jupyter03](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/3ebcc4d1-c8cf-4a0c-b3f6-9c4081700da0)
+![jupyter03](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/98eaf5fa-baeb-44f5-bc20-4917558e0f27)
 
 * Complete transfer
-![jupyter04](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/23db7522-f585-4a43-8e9f-69134d6d3503)
+![jupyter04](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/286f1aba-c689-4161-b68d-c692e5c58cb1)
 
 * Click `caravel_fpga.ipynb` to open new tab and run Jupyter Notebook test
-![jupyter05](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/1383c6ac-e9a4-4a42-a95b-3c20e6f19903)
+![jupyter05](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/ce044ac5-2674-4b14-bb0a-f897bb7b6e47)
 
 * Run Jupyter Notebook cell-by-cell and use default `counter_la.hex` firmware
-![jupyter06](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/ac442762-83e2-4ae8-aca2-cbf5a6dad224)
+![jupyter06](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/15d841e3-d558-46e4-9b9c-c3a078963be0)
 
 * Get final `mprj value = 0xab51` (mapping to 16-bit reg_mprj_datal in [counter_la.c](https://github.com/bol-edu/caravel-soc_fpga/blob/main/testbench/counter_la/counter_la.c):128)
-![jupyter07](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/8eb37f20-1d83-43db-85e7-2f8b13eacc4d)
+![jupyter07](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/bd4cb119-e39c-42ce-9213-650e2e5dc2e3)
 
 As demonstration, you should able to test Caravel counter with counter_wb.hex firmware, Caravel gcd with gcd_la.hex firmware and even your new Caravel user project design.
 
@@ -404,12 +404,12 @@ In Xilinx FPGA revision stage, we had follow modifications to pass Xilinx compil
 ### Revision from Efabless Caravel harness SoC to Caravel SoC (No PDK)
 In first revision stage, we bypassed modules which have SKY PDK dependencies and removed package-facing pins like VDD, VS, VCC. But we had kept the same logic behavior of whole Caravel.  
 
-* [caravel-soc_fpga/rtl/soc-efabless/caravel.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/caravel.v) to [caravel-soc_fpga/rtl/soc/caravel.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/caravel.v)  
-* [caravel-soc_fpga/rtl/soc-efabless/chip_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/chip_io.v) to [caravel-soc_fpga/rtl/soc/chip_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/chip_io.v)  
-* [caravel-soc_fpga/rtl/soc-efabless/gpio_control_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/gpio_control_block.v) to [caravel-soc_fpga/rtl/soc/gpio_control_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/gpio_control_block.v)  
-* [caravel-soc_fpga/rtl/soc-efabless/gpio_defaults_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/gpio_defaults_block.v) to [caravel-soc_fpga/rtl/soc/gpio_defaults_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/gpio_defaults_block.v)  
-* [caravel-soc_fpga/rtl/soc-efabless/mprj_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/mprj_io.v) to [caravel-soc_fpga/rtl/soc/mprj_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/mprj_io.v)  
-* [caravel-soc_fpga/rtl/soc-efabless/housekeeping.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/housekeeping.v) to [caravel-soc_fpga/rtl/soc/housekeeping.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/housekeeping.v)   
+* [caravel-soc_fpga/rtl/soc-efabless/caravel.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/caravel.v) was modified to [caravel-soc_fpga/rtl/soc/caravel.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/caravel.v)  
+* [caravel-soc_fpga/rtl/soc-efabless/chip_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/chip_io.v) was modified to [caravel-soc_fpga/rtl/soc/chip_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/chip_io.v)  
+* [caravel-soc_fpga/rtl/soc-efabless/gpio_control_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/gpio_control_block.v) was modified to [caravel-soc_fpga/rtl/soc/gpio_control_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/gpio_control_block.v)  
+* [caravel-soc_fpga/rtl/soc-efabless/gpio_defaults_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/gpio_defaults_block.v) was modified to [caravel-soc_fpga/rtl/soc/gpio_defaults_block.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/gpio_defaults_block.v)  
+* [caravel-soc_fpga/rtl/soc-efabless/mprj_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/mprj_io.v) was modified to [caravel-soc_fpga/rtl/soc/mprj_io.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/mprj_io.v)  
+* [caravel-soc_fpga/rtl/soc-efabless/housekeeping.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc-efabless/housekeeping.v) was modified to [caravel-soc_fpga/rtl/soc/housekeeping.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/housekeeping.v)   
    
 ### Behavior spiflash.v to RTL spiflash.v and Behavior bram.v
 The original Efabless Caravel harness used behavior [caravel-soc_fpga/vip/spiflash.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/vip/spiflash.v). We rewrote to RTL [caravel-soc_fpga/rtl/soc/spiflash.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/rtl/soc/spiflash.v) (FPGA synthesizable) and behavior [caravel-soc_fpga/vip/bram.v](https://github.com/bol-edu/caravel-soc_fpga/blob/main/vip/bram.v) (needs FPGA BRAM porting). The behavior bram module was also be instantiated in corresponded Caravel testbench.
@@ -511,7 +511,7 @@ ssh ip port is 218.103.115.199:1200, ssh username/passwd is 02.pdhkcv and timeup
 ```
 
 * We use [MobaXterm](https://mobaxterm.mobatek.net/download.html) to SSH host `218.103.115.199`, port `1200`, username `02.pdhkcv` and passwd `02.pdhkcv`.
-![boledu vitis01](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/e17fe2e5-2903-4ab7-98db-5d5ab4ec9745)
+![boledu vitis01](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/eeeb0e4b-d0d8-4e83-b6a9-96fda7fbb116)
 
 * The Boledu OnlineFPGA users don't have sudo permission but they can run all commands used in Caravel SoC FPGA project. We demonstrate usages of `run_xsim`, `gtkwave` and `run_vivado`.
 ```console
@@ -541,7 +541,7 @@ GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
 [974125000] end time.
 WM Destroy
 ```
-![boledu vitis02](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/e92c9053-4443-4dbe-b297-b06da943af1c)
+![boledu vitis02](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/8fb24fca-98b0-4a6c-8e4a-7fd5a9aeaae2)
 ```console
 02.pdhkcv@HLS02:~/caravel-soc_fpga/testbench/counter_la$ cd ~/caravel-soc_fpga/vivado/
 ~/caravel-soc_fpga/vivado ~/caravel-soc_fpga/testbench/counter_la
@@ -572,46 +572,46 @@ INFO: [Common 17-206] Exiting Vivado at Thu May 25 10:23:31 2023...
 * The Xilinx Vitis 2022.1 can be found in these regions: us-east-1, us-east-2, us-west-1 and us-west-2
 * [We use AWS EC2 us-east-1](https://us-east-1.console.aws.amazon.com/ec2)
 * Images -> AMI Catalog -> Search 'vitis 2022.1' in AMIs
-![aws-001](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/bc6866ac-d9d4-46a3-ab70-b9c768dabbff)
+![aws-001](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/6672497a-7fc0-4ad5-b29b-18923b935b23)
 
 * Select
-![aws-002](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/2541416f-1a81-474a-9640-aef219b3f9bf)
+![aws-002](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/e69795ed-2003-4829-9134-72f1f6f0c715)
 
 * Continue
-![aws-003](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/629de6f8-d020-4447-98c8-7820d50c0712)
+![aws-003](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/6fb53f21-bdc3-4c02-b332-46d06249134c)
 
 * Launch Instance with AMI
-![aws-004](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/ad2247c3-3bc5-4e35-9f42-a77236d8f06b)
+![aws-004](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/ce1f2df6-f921-42a7-9d2c-85e05534aacb)
 
 * Name -> vitis.server
-![aws-004 x](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/57f856ed-ac0f-4102-a7bc-c93b37a328a2)
+![aws-004 x](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/9d875514-103a-479a-b942-91644e22bfb9)
 
 * Change to m5.2xlarge Instance type and Create new key pair
-![aws-005](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/c473c934-6346-43dd-b4b1-956b7cb1a79e)
+![aws-005](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/8d535f05-5bb4-48aa-8e16-d89dedb48649)
 
 * Create key pair name 'vitis.rsa.key' and key pair file is needed to download to local
-![aws-006](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/f58557cf-3e4c-44a8-9c5a-24c25006b931)
+![aws-006](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/d0b7eb39-f012-4dee-90e0-bc7ac8f3549b)
 
 * Create security group -> Confirm Summary (Vitis 2022.1 AMI, m5.2xlarge Instance, New security group and 220GiB volume) -> Launch instance
-![aws-007](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/0e20a370-8746-48bd-a304-39f01b5f3d06)
+![aws-007](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/70a2e182-e2d4-474b-9230-4fab6db877ee)
 
 * The EC2 instance is running
-![aws-008](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/54e6f37b-d54f-47e3-b6b3-1fb2a63758f3)
+![aws-008](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/fe838abe-0dcc-437a-9a05-727b1f3e3d6b)
 
 * Click EC2 instance i-00aff7b2ccd9cb2c1 (vitis.server) to find Public IPv4 address '18.207.96.216'
-![aws-009](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/63c77a4f-63f6-47e2-9f7a-3700e5396b0f)
+![aws-009](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/93540274-fb62-447e-afa6-71bb3de0908b)
 
 * We use [MobaXterm](https://mobaxterm.mobatek.net/download.html) to connect EC2 Ubuntu vitis.server  
   * host: 18.207.96.216 (use your found host)  
   * username: ubuntu  
   * private key: vitis.rsa.key.pem (use downloaded key pair file)
-![aws-010](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/0f14390d-9c23-456e-9148-7ae564cd0cf1)
+![aws-010](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/a41959b6-ac2c-415b-ad35-34aecc5e0eea)
 
 * Login EC2 Ubuntu vitis.server
-![aws-011](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/1340ca7c-cf02-4cdb-be8f-1f24b5bde877)
+![aws-011](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/1e558738-1752-4c1e-9904-fdf5f8f958f6)
 
 * While finishing usage of vitis.server, remember go to EC2 console and select Running instance i-00aff7b2ccd9cb2c1 -> Instance state -> Terminate instance
-![aws-012](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/9eaa89dc-c4f5-430b-bfec-32765b7e946a)
+![aws-012](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/d55f3e86-0ac5-4aa3-84da-e68564f6f749)
 
 ## Appendix: Reference Documents
 ### Caravel Offical
