@@ -20,7 +20,7 @@ Any question/idea of Caravel SoC FPGA can be posted in [Discussions](https://git
 Acknowledgement for Project:  
 [Patrick Lin](mailto:patrickxlin@gmail.com)/[patrick-lin-git](https://github.com/patrick-lin-git), [Willy Chiang](mailto:cwenpin@gmail.com), [Tony Ho](mailto:tonyho722@gmail.com), [Allen Chang](mailto:mailggwhc@gmail.com), [Ian Liu](mailto:IanLiu@vianextech.com), [Bow Chao](mailto:var256@gmail.com)
 
-[Video Demonstration on Youtube](https://www.youtube.com/watch?v=n09mRNaYMiY "Video Demonstration")  
+[Video Demonstration on Youtube](https://youtu.be/Ypxo9JC76qU)  
 <img src="https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/269794fc-d865-4625-bc78-0e2427c6152b" width=60%>
 
 ## Toolchain Prerequisites
