@@ -61,7 +61,7 @@ Acknowledgement for Project:
 If you want to experience FPGA board validation with prebuilt Caravel counter user project FPGA bitstream and Jupyter Notebook testbench, you can hand-on the [last FPGA validation step](https://github.com/bol-edu/caravel-soc_fpga#test-caravel-user-project-design-on-fpga-board-with-jupyter-notebook). 
 
 ## Prepare a Xilinx Vitis on Ubuntu Machine
-The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu (free) / AWS EC2 (charge).
+The Xilinx Vitis needs minimum 16 GB system memory (32 GB+ is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu (free) / AWS EC2 (charge).
 
 **In-house setup (deploying with hours)**
 * Install necessary dependencies before Vitis installation: `sudo apt install libtinfo5 libncurses5 -y`
