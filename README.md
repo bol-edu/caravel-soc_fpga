@@ -71,10 +71,17 @@ The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You c
 `source <Vitis_install_path>/xilinx/xrt/setup.sh`  
 * Before running Vitis `source /home/<user>/.bashrc`
 
-**Boledu presetup (no deploying)**
-* Limited quotas: 20 users
-* Provide both online [Vitis machine user flow](https://github.com/bol-edu/caravel-soc_fpga/blob/main/README.md#appendix-boledu-vitis-machine) and [PYNQ-Z2 FPGA board user flow](https://github.com/bol-edu/caravel-soc_fpga/tree/main#validation-on-pynq-fpga-board)
-* Fill out [application form](https://docs.google.com/forms/d/e/1FAIpQLScZQZXyrtWZiT6r6_HkJhWV-VPNmRv6qAE5ehtmu2Qz-71V4w/viewform?usp=share_link) and [feedback your comments of Caravel SoC FPGA](https://github.com/bol-edu/caravel-soc_fpga/discussions)
+**Boledu Prime program (no deploying)**
+* Benefit of joining Prime program  
+  a. Access Boledu lab facilities of [Vitis machine](https://github.com/bol-edu/caravel-soc_fpga#appendix-boledu-vitis-machine) and [PYNQ-Z2 board](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board) (limited 10 participants)  
+  b. Participate in Prime program meeting/training  
+  c. Get early access on [FSIC platform](https://github.com/bol-edu/fsic_fpga#fsic--ic-validation-system)  
+  d. Get the chance to put your [user project in FSIC tapeout](https://github.com/bol-edu/fsic_fpga#user-project-is-readily-integrated-into-soc--axi-interface)
+* Participants contribute in the following  
+  a. Provide feedback on the github documentation, build flow and [discussion](https://github.com/bol-edu/caravel-soc_fpga/discussions)  
+  b. Be a contributor to enhance the system  
+  c. Help other developers
+* Prime program [application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)
 
 **AWS EC2 Vitis subscription (deploying within minutes but charge)**  
 
@@ -246,7 +253,7 @@ to gcd_la.hex firmware read
 fiROM = open("gcd_la.hex", "r+")
 ```
 ### Validation on PYNQ FPGA Board
-You can validate designed Caravel user project on your PYNQ-Z2 FPGA board or use presetup boards from Boledu OnlineFPGA ([application form](https://docs.google.com/forms/d/e/1FAIpQLScZQZXyrtWZiT6r6_HkJhWV-VPNmRv6qAE5ehtmu2Qz-71V4w/viewform)). We demonstrate PYNQ-Z2 FPGA board user flow to explain the validation steps.
+You can validate designed Caravel user project on your PYNQ-Z2 FPGA board or join Boledu Prime program ([application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)) to use presetup one. We demonstrate PYNQ-Z2 FPGA board user flow to explain the validation steps.
 
 * OnlineFPGA login
 ```
@@ -421,7 +428,7 @@ xelab -top $design_tb -snapshot $design_tb_elab
 xsim $design_tb_elab -R
 ```
 ## Appendix: Boledu Vitis Machine
-Boledu OnlineFPGA ([application form](https://docs.google.com/forms/d/e/1FAIpQLScZQZXyrtWZiT6r6_HkJhWV-VPNmRv6qAE5ehtmu2Qz-71V4w/viewform)) provide presetup Xilinx Vitis Ubuntu machines. The follow Vitis machine user flow demonstrates the usages of Xilinx Vitis .
+Boledu Prime program ([application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)) provides presetup Xilinx Vitis Ubuntu machines. The follow Vitis machine user flow demonstrates the usages of Xilinx Vitis .
 
 * OnlineFPGA login
 ```
