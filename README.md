@@ -61,7 +61,7 @@ Acknowledgement for Project:
 If you want to experience FPGA board validation with prebuilt Caravel counter user project FPGA bitstream and Jupyter Notebook testbench, you can hand-on the [last FPGA validation step](https://github.com/bol-edu/caravel-soc_fpga#test-caravel-user-project-design-on-fpga-board-with-jupyter-notebook). 
 
 ## Prepare a Xilinx Vitis on Ubuntu Machine
-The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu (free) / AWS EC2 (charge).
+The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu Prime program (free) / AWS EC2 (charge).
 
 **In-house setup (deploying with hours)**
 * Install necessary dependencies before Vitis installation: `sudo apt install libtinfo5 libncurses5 -y`
@@ -73,14 +73,14 @@ The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You c
 
 **Boledu Prime program (no deploying)**
 * Benefit of joining Prime program  
-  a. Access Boledu lab facilities of [Vitis machine](https://github.com/bol-edu/caravel-soc_fpga#appendix-boledu-vitis-machine) and [PYNQ-Z2 board](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board) (limited 10 participants)  
-  b. Participate in Prime program meeting/training  
-  c. Get early access on [FSIC platform](https://github.com/bol-edu/fsic_fpga#fsic--ic-validation-system)  
-  d. Get the chance to put your [user project in FSIC tapeout](https://github.com/bol-edu/fsic_fpga#user-project-is-readily-integrated-into-soc--axi-interface)
+1. Access Boledu lab facilities of [Vitis machine](https://github.com/bol-edu/caravel-soc_fpga#appendix-boledu-vitis-machine) and [PYNQ-Z2 board](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board) (limited 10 participants)  
+2. Participate in Prime program meeting/training  
+3. Get early access on [FSIC platform](https://github.com/bol-edu/fsic_fpga#fsic--ic-validation-system)  
+4. Get the chance to put your [user project in FSIC tapeout](https://github.com/bol-edu/fsic_fpga#user-project-is-readily-integrated-into-soc--axi-interface)
 * Participants contribute in the following  
-  a. Provide feedback on the github documentation, build flow and [discussion](https://github.com/bol-edu/caravel-soc_fpga/discussions)  
-  b. Be a contributor to enhance the system  
-  c. Help other developers
+1. Provide feedback on the github documentation, build flow and [discussion](https://github.com/bol-edu/caravel-soc_fpga/discussions)  
+2. Be a contributor to enhance the system  
+3. Help other developers
 * Prime program [application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)
 
 **AWS EC2 Vitis subscription (deploying within minutes but charge)**  
