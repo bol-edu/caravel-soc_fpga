@@ -61,27 +61,18 @@ Acknowledgement for Project:
 If you want to experience FPGA board validation with prebuilt Caravel counter user project FPGA bitstream and Jupyter Notebook testbench, you can hand-on the [last FPGA validation step](https://github.com/bol-edu/caravel-soc_fpga#test-caravel-user-project-design-on-fpga-board-with-jupyter-notebook). 
 
 ## Prepare a Xilinx Vitis on Ubuntu Machine
-The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu Prime program (free) / AWS EC2 (charge).
+The Xilinx Vitis needs minimum 32 GB system memory (64 GB is recommended). You can in-house setup Vitis on your Ubuntu machine or apply a ready for using Vitis machine from Boledu (free) / AWS EC2 (charge).
 
 **In-house setup (deploying with hours)**
-* Install necessary dependencies before Vitis installation: `sudo apt install libtinfo5 libncurses5 -y`
-* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements  
-* Add below lines to `/home/<user>/.bashrc` after completing Vitis installation  
-`source <Vitis_install_path>/Xilinx/Vitis/2022.1/settings64.sh`  
-`source <Vitis_install_path>/xilinx/xrt/setup.sh`  
-* Before running Vitis `source /home/<user>/.bashrc`
+* The Xilinx Vitis 2022.1 requires roughly 200 GB of disk space to install
+* Install necessary dependencies before Vitis installation: `sudo apt install libtinfo5 libncurses5 build-essential -y`
+* Offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements  
+* Add below line to `/home/<user>/.bashrc` after completing Vitis installation  
+`source <Vitis_install_path>/Xilinx/Vitis/2022.1/settings64.sh`
 
-**Boledu Prime program (no deploying)**
-* Benefit of joining Prime program  
-  (1) Access Boledu lab facilities of [Vitis machine](https://github.com/bol-edu/caravel-soc_fpga#appendix-boledu-vitis-machine) and [PYNQ-Z2 board](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board) (limited 10 participants)  
-  (2) Participate in Prime program meeting/training  
-  (3) Get early access on [FSIC platform](https://github.com/bol-edu/fsic_fpga#fsic--ic-validation-system)  
-  (4) Get the chance to put your [user project in FSIC tapeout](https://github.com/bol-edu/fsic_fpga#user-project-is-readily-integrated-into-soc--axi-interface)
-* Participants contribute in the following  
-  (1) Provide feedback on the github documentation, build flow and [discussion](https://github.com/bol-edu/caravel-soc_fpga/discussions)  
-  (2) Be a contributor to enhance the system  
-  (3) Help other developers
-* Prime program [application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)
+**Boledu (no deploying)**
+
+Boledu lab provides facilities of [Vitis machine](https://github.com/bol-edu/caravel-soc_fpga#appendix-boledu-vitis-machine) and [PYNQ-Z2 board](https://github.com/bol-edu/caravel-soc_fpga#validation-on-pynq-fpga-board) (limited users)  
 
 **AWS EC2 Vitis subscription (deploying within minutes but charge)**  
 
@@ -253,7 +244,7 @@ to gcd_la.hex firmware read
 fiROM = open("gcd_la.hex", "r+")
 ```
 ### Validation on PYNQ FPGA Board
-You can validate designed Caravel user project on your PYNQ-Z2 board or join Boledu Prime program ([application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)) to use presetup one. We demonstrate Boledu PYNQ-Z2 board user flow to explain the validation steps.
+You can validate designed Caravel user project on your PYNQ-Z2 board or Boledu presetup one. We demonstrate Boledu PYNQ-Z2 board user flow to explain the validation steps.
 
 * OnlineFPGA login
 ```
@@ -428,7 +419,7 @@ xelab -top $design_tb -snapshot $design_tb_elab
 xsim $design_tb_elab -R
 ```
 ## Appendix: Boledu Vitis Machine
-Boledu Prime program ([application form](https://docs.google.com/forms/d/1SL3_1C-p3XC8zOK1aoqdSMLJcr5ZgaPW0dPa6yAKhDo)) provides presetup Xilinx Vitis Ubuntu machines. The follow Boledu Vitis machine user flow demonstrates the usages of Xilinx Vitis .
+Boledu provides presetup Xilinx Vitis Ubuntu machines. The follow Boledu Vitis machine user flow demonstrates the usages of Xilinx Vitis .
 
 * OnlineFPGA login
 ```
