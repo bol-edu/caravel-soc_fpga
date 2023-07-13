@@ -215,6 +215,17 @@ Copy gcd user project design source to vivado user source directory and export e
 $ cp ~/caravel-soc_fpga/rtl/user/user_proj_example.gcd.v ~/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user
 $ export USER_DESIGN_FILE=user_proj_example.gcd.v
 ```
+
+### Review Vivado Block Design in GUI
+Open your Vivado GUI block design created by `run_vivado` shell script.
+```console
+$ cd ~/caravel-soc_fpga/vivado/vvd_caravel_fpga
+$ vivado vvd_caravel_fpga.xpr
+```
+
+After loading Vivado project, click Open Block Design in IP INTEGRATOR you can see Diagram window. 
+![vivado_bd](https://github.com/bol-edu/caravel-soc_fpga/assets/98332019/4245577c-bc46-4cdd-b49a-844f1d5d24c4)
+
 ## Test Caravel User Project Design on FPGA Board with Jupyter Notebook
 Before validating your Caravel user project design on FPGA board with Jupyter Notebook testbench, you should confirm the checklist of (1) compiled RISC-V firmwares, (2) FPGA bitstream, (3) FPGA HWH file and (4) Jupyter Notebook testbench example code.
 
